@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/huangjiahan/manimations/media/videos/IntroducePi/1080p60/partial_movie_files/ShowMyPi/3544663784_419380906_223132457.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/IntroducePi/1080p60/partial_movie_files/ShowMyPi/260329756_1839128356_1537839993.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/IntroducePi/1080p60/partial_movie_files/ShowMyPi/260329756_1977771041_4127722367.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/IntroducePi/1080p60/partial_movie_files/ShowMyPi/260329756_1839128356_4074988975.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/IntroducePi/1080p60/partial_movie_files/ShowMyPi/260329756_1697819575_3460703242.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/IntroducePi/1080p60/partial_movie_files/ShowMyPi/260329756_2162116908_3460703242.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/IntroducePi/1080p60/partial_movie_files/ShowMyPi/260329756_2408024828_1775464902.mp4'

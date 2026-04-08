@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/huangjiahan/manimations/media/videos/CombinedRotation/1080p60/partial_movie_files/CubeRotation/1866060033_2005305742_3263673003.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/CombinedRotation/1080p60/partial_movie_files/CubeRotation/1272381536_4048777398_3220151764.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/CombinedRotation/1080p60/partial_movie_files/CubeRotation/1272381536_1121617232_1610324824.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/CombinedRotation/1080p60/partial_movie_files/CubeRotation/1272381536_1821610857_2001749456.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/CombinedRotation/1080p60/partial_movie_files/CubeRotation/1272381536_60789886_1580622329.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/CombinedRotation/1080p60/partial_movie_files/CubeRotation/1272381536_2325547905_2170490757.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/CombinedRotation/1080p60/partial_movie_files/CubeRotation/1272381536_691929108_334252231.mp4'

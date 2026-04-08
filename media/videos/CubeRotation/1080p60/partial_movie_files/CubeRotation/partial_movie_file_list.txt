@@ -1,0 +1,4 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/huangjiahan/manimations/media/videos/CubeRotation/1080p60/partial_movie_files/CubeRotation/53353463_2005305742_481822606.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/CubeRotation/1080p60/partial_movie_files/CubeRotation/1174520572_2181969351_2215978604.mp4'
+file 'file:/Users/huangjiahan/manimations/media/videos/CubeRotation/1080p60/partial_movie_files/CubeRotation/1174520572_1831374817_910855703.mp4'

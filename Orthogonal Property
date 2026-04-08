@@ -1,0 +1,53 @@
+from manim import *
+import numpy as np
+
+class OrthogonalProperty(Scene):
+    def construct(self):
+        # 1. 创建底层网格
+        grid = NumberPlane(
+            x_range=[-10, 10, 1], y_range=[-10, 10, 1],
+            background_line_style={"stroke_color": TEAL, "stroke_opacity": 0.5}
+        )
+        self.add(grid)
+
+        # 2. 定义两个初始向量
+        vec_u = Vector([2, 0], color=YELLOW)
+        vec_v = Vector([1, 1.732], color=PINK) # 长度为2，与 u 夹角 60 度
+        
+        # 3. 动态追踪夹角 (始终保持 60 度 / PI/3)
+        angle_arc = always_redraw(lambda: Angle(vec_u, vec_v, radius=0.8, color=WHITE))
+        
+        # 将网格和向量打包，准备一起旋转
+        moving_group = VGroup(grid, vec_u, vec_v)
+        
+        self.play(Create(grid), GrowArrow(vec_u), GrowArrow(vec_v))
+        self.play(Create(angle_arc))
+        self.wait(1)
+
+        # 4. 公式 UI 面板 (永远不动)
+        ui_panel = MathTex(
+            r"|\vec{u}| = 2.00 \\",
+            r"|\vec{v}| = 2.00 \\",
+            r"\vec{u} \cdot \vec{v} = 2.00",
+            font_size=36
+        ).to_corner(UL)
+        # 加上背景框防止被网格干扰视线
+        ui_bg = BackgroundRectangle(ui_panel, color=BLACK, fill_opacity=0.8)
+        self.add_fixed_in_frame_mobjects(ui_bg, ui_panel)
+
+        self.play(Write(ui_panel))
+        self.wait(1)
+
+        # 5. 定义一个正交变换矩阵 Q (例如：旋转 45 度)
+        theta = 45 * DEGREES
+        Q_matrix = [[np.cos(theta), -np.sin(theta)], 
+                    [np.sin(theta),  np.cos(theta)]]
+
+        # 6. 施加正交变换！
+        # 观众会看到网格和向量一起旋转，夹角弧线完美跟随，而左上角的数字丝毫不变！
+        self.play(
+            moving_group.animate.apply_matrix(Q_matrix),
+            run_time=3,
+            path_arc=theta # 让变换轨迹呈现优雅的圆弧形
+        )
+        self.wait(2)
