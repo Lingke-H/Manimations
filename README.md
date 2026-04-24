@@ -1,3 +1,46 @@
+# Mathematical Methods for 3D-to-2D Projection Visualized
+
+This repository contains the Manim source code and technical documentation used to generate 3D-to-2D projection animations. The project visualizes the linear algebra principles underlying computer graphics, specifically focusing on how spatial rotations affect 2D orthographic projections.
+
+## Mathematical Framework
+
+The animations contained in this repository illustrate the fundamental matrix operations required for basic 3D graphics rendering. The transformation pipeline is broken down into four discrete steps:
+
+1.  **Vector Representation:** Defining coordinates in a 3D spatial coordinate system.
+2.  **Matrix Transformation:** Applying rotation matrices to adjust the viewpoint or object orientation.
+3.  **Dimensionality Reduction:** Eliminating the Z-coordinate (in orthographic projection) to map coordinates to a plane.
+4.  **2D Rendering:** Generating the final output on a 2D screen.
+
+Additionally, the project highlights key mathematical and computational constraints:
+* **Non-Commutativity:** Demonstrating that the order of matrix multiplication alters the final projection result ($R = R_x R_y R_z$).
+* **Numerical Drift:** Visualizing the degradation of orthogonality due to floating-point errors over continuous transformations.
+* **Information Loss:** Illustrating the mathematically irreversible nature of singular projection matrices.
+
+## Repository Structure
+
+The repository consists of several Python scripts, each responsible for rendering specific mathematical proofs or geometric transformations:
+
+* **`CombinedRotation_I.py`**: The primary 3D rendering script. It executes a sequential rotation of a transparent cube across the Z, Y, and X axes. The script utilizes vertex tracking and simultaneously renders the corresponding combined rotation matrix equations.
+* **`CubeRotation_x.py`, `CubeRotation_y.py`, `CubeRotation_z.py`**: Modular scripts utilizing Manim's updater functions to execute continuous, single-axis rotations. These serve as the foundational elements for the combined rotation.
+* **`Orthogonal Property.py`**: A 2D animation dedicated to a geometric proof. It applies an orthogonal matrix transformation to a set of vectors to establish that orthogonal matrices preserve both vector magnitude and the angle between vectors.
+* **`NowWeHaveEmotions.py`**: A supplementary script utilizing the `manimlib` Pi Creature class to demonstrate character-based rendering and attribute manipulation.
+
+## Installation and Execution
+
+To compile and render the animations locally, the following environment setup is required.
+
+### System Requirements
+* Python 3.8 or higher
+* **Manim Community Edition (CE):** Required for compiling the 3D cube rotations and orthogonal property proofs.
+* **ManimGL:** Required specifically for compiling `NowWeHaveEmotions.py`.
+
+### Rendering Instructions
+To execute the primary combined rotation scene in high quality, run the following command in the terminal:
+
+```bash
+manim -pql CombinedRotation_I.py CubeRotation
+```
+
 
 
 
@@ -44,47 +87,3 @@
 manim -pql CombinedRotation_I.py CubeRotation
 ```
 *（注：将 `-pql` 标志修改为 `-pqh` 可进行高质量渲染，其他输出配置请参阅 Manim 官方文档。）*
-
-
-# Mathematical Methods for 3D-to-2D Projection Visualized
-
-This repository contains the Manim source code and technical documentation used to generate 3D-to-2D projection animations. The project visualizes the linear algebra principles underlying computer graphics, specifically focusing on how spatial rotations affect 2D orthographic projections.
-
-## Mathematical Framework
-
-The animations contained in this repository illustrate the fundamental matrix operations required for basic 3D graphics rendering. The transformation pipeline is broken down into four discrete steps:
-
-1.  **Vector Representation:** Defining coordinates in a 3D spatial coordinate system.
-2.  **Matrix Transformation:** Applying rotation matrices to adjust the viewpoint or object orientation.
-3.  **Dimensionality Reduction:** Eliminating the Z-coordinate (in orthographic projection) to map coordinates to a plane.
-4.  **2D Rendering:** Generating the final output on a 2D screen.
-
-Additionally, the project highlights key mathematical and computational constraints:
-* **Non-Commutativity:** Demonstrating that the order of matrix multiplication alters the final projection result ($R = R_x R_y R_z$).
-* **Numerical Drift:** Visualizing the degradation of orthogonality due to floating-point errors over continuous transformations.
-* **Information Loss:** Illustrating the mathematically irreversible nature of singular projection matrices.
-
-## Repository Structure
-
-The repository consists of several Python scripts, each responsible for rendering specific mathematical proofs or geometric transformations:
-
-* **`CombinedRotation_I.py`**: The primary 3D rendering script. It executes a sequential rotation of a transparent cube across the Z, Y, and X axes. The script utilizes vertex tracking and simultaneously renders the corresponding combined rotation matrix equations.
-* **`CubeRotation_x.py`, `CubeRotation_y.py`, `CubeRotation_z.py`**: Modular scripts utilizing Manim's updater functions to execute continuous, single-axis rotations. These serve as the foundational elements for the combined rotation.
-* **`Orthogonal Property.py`**: A 2D animation dedicated to a geometric proof. It applies an orthogonal matrix transformation to a set of vectors to establish that orthogonal matrices preserve both vector magnitude and the angle between vectors.
-* **`NowWeHaveEmotions.py`**: A supplementary script utilizing the `manimlib` Pi Creature class to demonstrate character-based rendering and attribute manipulation.
-
-## Installation and Execution
-
-To compile and render the animations locally, the following environment setup is required.
-
-### System Requirements
-* Python 3.8 or higher
-* **Manim Community Edition (CE):** Required for compiling the 3D cube rotations and orthogonal property proofs.
-* **ManimGL:** Required specifically for compiling `NowWeHaveEmotions.py`.
-
-### Rendering Instructions
-To execute the primary combined rotation scene in high quality, run the following command in the terminal:
-
-```bash
-manim -pql CombinedRotation_I.py CubeRotation
-```
