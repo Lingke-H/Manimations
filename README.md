@@ -1,5 +1,7 @@
 # Mathematical Methods for 3D-to-2D Projection Visualized
 
+> [中文版见下方 / Chinese version below](#中文版)
+
 This repository contains the Manim source code and technical documentation used to generate 3D-to-2D projection animations. The project visualizes the linear algebra principles underlying computer graphics, specifically focusing on how spatial rotations affect 2D orthographic projections.
 
 ## Mathematical Framework
@@ -43,7 +45,7 @@ manim -pql CombinedRotation_I.py CubeRotation
 
 
 
-
+<a id="中文版"></a>
 # 三维至二维投影数学方法可视化
 
 本仓库包含用于生成三维至二维投影动画的 Manim 源代码及技术文档。本项目将计算机图形学背后的线性代数原理进行了可视化，主要侧重于空间旋转如何影响二维正交投影。
